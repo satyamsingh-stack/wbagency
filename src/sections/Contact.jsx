@@ -64,8 +64,8 @@ export default function Contact() {
   }
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'info@dreilanddigital.ch', href: 'mailto:info@dreilanddigital.ch' },
-    { icon: Phone, label: 'Phone', value: '+4915758848625', href: 'tel:+4915758848625' },
+    { icon: Mail, label: 'Email', value: 'support@hornungdigital.ch', href: 'support@hornungdigital.ch' },
+    { icon: Phone, label: 'Phone', value: '+49 1575 8848625', href: 'tel:+49 1575 8848625' },
     { icon: MapPin, label: 'Address', value: 'Missionsstraße 24, 4055 Basel, Schweiz', href: '#' },
   ]
 
