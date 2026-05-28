@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
 
 export default function WhatsApp() {
-  const phoneNumber = '919137700478'
+  const phoneNumber = '+4915758848625'
   const message = 'Hello! I would like to know more about your services.'
 
   const handleWhatsAppClick = () => {

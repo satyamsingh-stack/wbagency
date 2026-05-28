@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
+import { Link } from 'react-scroll'
 
 export default function Pricing() {
     const plans = [
@@ -130,17 +131,18 @@ export default function Pricing() {
                 </div>
 
                 {/* CTA Button */}
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full mb-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                <Link
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  className={`w-full mb-8 py-3 rounded-lg font-semibold transition-all duration-300 text-center inline-block cursor-pointer ${
                     plan.highlighted
                       ? 'btn-primary'
                       : 'btn-secondary'
                   }`}
                 >
                   Get Started
-                </motion.button>
+                </Link>
 
                 {/* Features */}
                 <div className="space-y-4">
@@ -173,17 +175,18 @@ export default function Pricing() {
           className="glass rounded-2xl p-8 text-center"
         >
           <h3 className="text-xl font-bold text-white mb-4">Custom Requirements?</h3>
-          <p className="text-white/60 mb-6 max-w-2xl mx-auto">
-            We can tailor any package to meet your specific needs. Let's discuss your project requirements and create a custom solution.
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-secondary"
-          >
-            Contact Us for Custom Quote
-          </motion.button>
-        </motion.div>
+<p className="text-white/60 mb-6 max-w-2xl mx-auto">
+             We can tailor any package to meet your specific needs. Let's discuss your project requirements and create a custom solution.
+           </p>
+           <Link
+             to="contact"
+             smooth={true}
+             duration={500}
+             className="btn-secondary inline-block cursor-pointer"
+           >
+             Contact Us for Custom Quote
+           </Link>
+         </motion.div>
       </div>
     </section>
   )

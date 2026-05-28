@@ -4,7 +4,7 @@ import { ExternalLink } from 'lucide-react'
 export default function Portfolio() {
   const projects = [
     {
-      title: 'Trend Zomedia',
+      title: 'Trendzo Media',
       category: 'Business',
       categoryColor: 'cyan',
       description: 'Modern digital agency website with animated elements',
