@@ -9,8 +9,8 @@ export default function Testimonials() {
     {
       id: 1,
       name: 'Sarah Johnson',
-      role: 'CEO, TechVenture',
-      company: 'TechVenture',
+      // role: 'CEO, TechVenture',
+      // company: 'TechVenture',
       rating: 5,
       content: 'WebAgency transformed our outdated website into a modern masterpiece. The attention to detail and technical expertise exceeded our expectations.',
       avatar: 'from-blue-500 to-cyan-500',
@@ -19,8 +19,8 @@ export default function Testimonials() {
     {
       id: 2,
       name: 'Michael Chen',
-      role: 'Founder, DataSync',
-      company: 'DataSync',
+      // role: 'Founder, DataSync',
+      // company: 'DataSync',
       rating: 5,
       content: 'From concept to launch, they delivered exceptional quality. Our conversion rates increased by 150% after the redesign.',
       avatar: 'from-purple-500 to-pink-500',
@@ -29,8 +29,8 @@ export default function Testimonials() {
     {
       id: 3,
       name: 'Emily Rodriguez',
-      role: 'Marketing Director, BrandFlow',
-      company: 'BrandFlow',
+      // role: 'Marketing Director, BrandFlow',
+      // company: 'BrandFlow',
       rating: 5,
       content: 'The team understood our vision perfectly. The new website elevated our brand presence and user engagement dramatically.',
       avatar: 'from-green-500 to-teal-500',
@@ -190,13 +190,14 @@ export default function Testimonials() {
             <p className="text-white/70 mb-6 max-w-2xl">
               Let's discuss how we can transform your business with exceptional web development.
             </p>
-            <motion.button
+            <motion.a
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="btn-primary"
             >
               Start Your Project
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </div>

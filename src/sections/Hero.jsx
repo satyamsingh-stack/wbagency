@@ -87,14 +87,15 @@ export default function Hero() {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
-          <motion.button
+          <motion.a
+            href="#contact"
             whileHover={{ }}
             whileTap={{ }}
             className="btn-primary-no-hover group flex items-center gap-2"
           >
             Hire Me
             <ArrowRight size={20} />
-          </motion.button>
+          </motion.a>
           <motion.button
             whileHover={{ }}
             whileTap={{ }}

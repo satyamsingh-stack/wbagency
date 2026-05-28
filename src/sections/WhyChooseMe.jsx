@@ -129,7 +129,7 @@ export default function WhyChooseMe() {
         >
           {[
             { value: '99.9%', label: 'Uptime' },
-            { value: '48hrs', label: 'Response Time' },
+            { value: '24hrs', label: 'Response Time' },
             { value: '24/7', label: 'Support' },
             { value: '100%', label: 'Satisfaction' },
           ].map((stat, idx) => (

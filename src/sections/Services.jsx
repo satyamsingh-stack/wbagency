@@ -117,13 +117,14 @@ export default function Services() {
           transition={{ delay: 0.5 }}
           className="text-center mt-16"
         >
-          <motion.button
+          <motion.a
+            href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="btn-primary"
           >
             Get Started
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>

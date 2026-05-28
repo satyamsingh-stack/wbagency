@@ -7,7 +7,6 @@ import Portfolio from './sections/Portfolio'
 import Testimonials from './sections/Testimonials'
 import Pricing from './sections/Pricing'
 import Contact from './sections/Contact'
-import Legal from './sections/Legal'
 import Footer from './components/Footer'
 import AnimatedBackground from './components/AnimatedBackground'
 import ScrollProgress from './components/ScrollProgress'
@@ -29,7 +28,6 @@ export default function App() {
       <Testimonials />
       <Pricing />
       <Contact />
-      <Legal />
       <Footer />
     </div>
   )
