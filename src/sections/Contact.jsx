@@ -64,9 +64,9 @@ export default function Contact() {
   }
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: '', href: 'mailto:' },
-    { icon: Phone, label: 'Phone', value: '', href: 'tel:' },
-    { icon: MapPin, label: 'Location', value: '', href: '#' },
+    { icon: Mail, label: 'Email', value: '', href: '' },
+    { icon: Phone, label: 'Phone', value: '+41 7844 47970', href: 'tel:+41784447970' },
+    { icon: MapPin, label: 'Address', value: 'Missionsstraße 24, 4055 Basel, Schweiz', href: '#' },
   ]
 
   const containerVariants = {

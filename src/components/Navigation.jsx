@@ -19,7 +19,6 @@ export default function Navigation() {
     { name: 'Services', href: '#services' },
     { name: 'Packages', href: '#pricing' },
     { name: 'Contact', href: '#contact' },
-    { name: 'Impressum / Datenschutz', href: '#legal' },
   ]
 
   return (
