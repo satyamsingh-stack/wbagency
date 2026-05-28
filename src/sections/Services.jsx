@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Globe, Code, Database, Zap, Shield, Cpu, Smartphone, Palette, TrendingUp, ShoppingCart } from 'lucide-react'
+import { Link } from 'react-scroll'
 
 export default function Services() {
   const services = [
@@ -117,14 +118,14 @@ export default function Services() {
           transition={{ delay: 0.5 }}
           className="text-center mt-16"
         >
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-primary"
-          >
-            Get Started
-          </motion.a>
+<Link
+             to="contact"
+             smooth={true}
+             duration={500}
+             className="btn-primary inline-block cursor-pointer"
+           >
+             Get Started
+           </Link>
         </motion.div>
       </div>
     </section>

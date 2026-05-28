@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Code2, Zap, Layers } from 'lucide-react'
+import { Link } from 'react-scroll'
 
 export default function Hero() {
   const floatingIcons = [
@@ -83,27 +84,28 @@ export default function Hero() {
         </motion.p>
 
         {/* CTA Buttons */}
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-        >
-          <motion.a
-            href="#contact"
-            whileHover={{ }}
-            whileTap={{ }}
-            className="btn-primary-no-hover group flex items-center gap-2"
-          >
-            Hire Me
-            <ArrowRight size={20} />
-          </motion.a>
-          <motion.button
-            whileHover={{ }}
-            whileTap={{ }}
-            className="btn-secondary-no-hover"
-          >
-            View Packages
-          </motion.button>
-        </motion.div>
+<motion.div
+           variants={itemVariants}
+           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+         >
+           <motion.a
+             href="#contact"
+             whileHover={{ }}
+             whileTap={{ }}
+             className="btn-primary-no-hover group flex items-center gap-2"
+           >
+             Hire Me
+             <ArrowRight size={20} />
+           </motion.a>
+           <Link
+             to="pricing"
+             smooth={true}
+             duration={500}
+             className="btn-secondary-no-hover inline-flex items-center justify-center cursor-pointer"
+           >
+             View Packages
+           </Link>
+         </motion.div>
       </motion.div>
     </section>
   )

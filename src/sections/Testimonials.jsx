@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Link } from 'react-scroll'
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -190,14 +191,14 @@ export default function Testimonials() {
             <p className="text-white/70 mb-6 max-w-2xl">
               Let's discuss how we can transform your business with exceptional web development.
             </p>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-primary"
-            >
-              Start Your Project
-            </motion.a>
+<Link
+               to="contact"
+               smooth={true}
+               duration={500}
+               className="btn-primary inline-block cursor-pointer"
+             >
+               Start Your Project
+             </Link>
           </div>
         </motion.div>
       </div>
