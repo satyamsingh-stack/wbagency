@@ -2,52 +2,47 @@ import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
 
 export default function Pricing() {
-  const plans = [
+    const plans = [
     {
-      name: 'Basic Website',
-      price: '999',
-      description: 'Perfect for small businesses',
+      name: 'Starter Website',
+      price: '€500 – €800',
+      description: 'Perfect for small businesses getting started online',
       features: [
-        'Up to 5 Pages',
-        'Mobile Responsive',
-        'Basic SEO',
-        'Contact Form',
-        'SSL Certificate',
-        '1 Month Support',
+        'Up to 5 pages',
+        'Mobile responsive design',
+        'WhatsApp integration',
+        'Contact form',
+        'Basic SEO setup',
       ],
       highlighted: false,
+      period: 'one-time', // One-time payment
     },
     {
-      name: 'Custom Web App',
-      price: '2,999',
-      description: 'Full-featured web application',
+      name: 'Business Website',
+      price: '€800 – €1200',
+      description: 'Complete solution for growing businesses',
       features: [
-        'Unlimited Pages',
-        'Advanced Features',
-        'Database Integration',
-        'User Authentication',
-        'API Development',
-        'Admin Dashboard',
-        'Performance Optimization',
-        '3 Months Support',
+        'Booking system integration',
+        'SEO optimization',
+        'Google Business setup',
+        'Gallery / portfolio section',
+        'Mobile responsive design',
       ],
       highlighted: true,
+      period: 'one-time', // One-time payment
     },
     {
       name: 'Monthly Maintenance',
-      price: '499',
-      description: 'Ongoing support & updates',
+      price: 'From €49',
+      description: 'Ongoing support and updates',
       features: [
-        'Weekly Updates',
-        'Bug Fixes',
-        'Security Patches',
-        'Performance Monitoring',
-        'Backup Management',
-        'Priority Support',
-        '24/7 Monitoring',
-        'Scalability Support',
+        'Website updates',
+        'Technical maintenance',
+        'Small content changes',
+        'Security & support',
       ],
       highlighted: false,
+      period: 'monthly', // Monthly payment
     },
   ]
 
@@ -82,10 +77,10 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Simple, Transparent <span className="gradient-text">Pricing</span>
+            Transparent <span className="gradient-text">Pricing</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Choose the perfect plan for your project. All plans include dedicated support.
+            Choose the perfect package for your business needs
           </p>
         </motion.div>
 
@@ -128,8 +123,10 @@ export default function Pricing() {
 
                 {/* Price */}
                 <div className="mb-8">
-                  <span className="text-5xl font-bold gradient-text">${plan.price}</span>
-                  <span className="text-white/60 ml-2">/month</span>
+                  <span className="text-5xl font-bold gradient-text">{plan.price}</span>
+                  <span className="text-white/60 ml-2">
+                    {plan.period === 'monthly' ? '/month' : ''}
+                  </span>
                 </div>
 
                 {/* CTA Button */}
@@ -186,42 +183,6 @@ export default function Pricing() {
           >
             Contact Us for Custom Quote
           </motion.button>
-        </motion.div>
-
-        {/* FAQ Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mt-16 grid md:grid-cols-2 gap-6"
-        >
-          {[
-            {
-              q: 'What payment methods do you accept?',
-              a: 'We accept all major credit cards, bank transfers, and PayPal.',
-            },
-            {
-              q: 'Do you offer refunds?',
-              a: 'We offer a 14-day satisfaction guarantee if you\'re not happy with the work.',
-            },
-            {
-              q: 'Can I upgrade my plan?',
-              a: 'Yes, you can upgrade or downgrade your plan at any time with prorated adjustments.',
-            },
-            {
-              q: 'Is there a contract?',
-              a: 'No long-term contracts required. Cancel anytime with 30 days notice.',
-            },
-          ].map((faq, idx) => (
-            <motion.div
-              key={idx}
-              whileHover={{ y: -5 }}
-              className="glass rounded-lg p-6"
-            >
-              <p className="font-semibold text-white mb-2">{faq.q}</p>
-              <p className="text-white/60 text-sm">{faq.a}</p>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
     </section>

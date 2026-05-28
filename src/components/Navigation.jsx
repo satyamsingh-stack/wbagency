@@ -15,12 +15,11 @@ export default function Navigation() {
   }, [])
 
   const navItems = [
+    { name: 'Home', href: '#' },
     { name: 'Services', href: '#services' },
-    { name: 'Why Us', href: '#why' },
-    { name: 'Tech Stack', href: '#tech' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Pricing', href: '#pricing' },
+    { name: 'Packages', href: '#pricing' },
+    { name: 'Contact', href: '#contact' },
+    { name: 'Impressum / Datenschutz', href: '#legal' },
   ]
 
   return (
@@ -36,12 +35,12 @@ export default function Navigation() {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2 magnetic-hover cursor-pointer"
+            className="flex items-center gap-2 cursor-pointer"
           >
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center font-bold text-white">
-              WA
+              DD
             </div>
-            <span className="font-bold text-xl hidden sm:block gradient-text">WebAgency</span>
+            <span className="font-bold text-xl hidden sm:block gradient-text">Dreiland Digital Services</span>
           </motion.div>
 
           {/* Desktop Menu */}
@@ -53,7 +52,7 @@ export default function Navigation() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="magnetic-hover text-white/70 hover:text-white transition-colors text-sm font-medium inline-block"
+                className="text-white/70 hover:text-white transition-colors text-sm font-medium inline-block"
               >
                 {item.name}
               </motion.a>
@@ -61,7 +60,7 @@ export default function Navigation() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary magnetic-hover"
+              className="btn-primary"
             >
               Get Started
             </motion.button>
@@ -91,7 +90,7 @@ export default function Navigation() {
                 initial={{ x: -20 }}
                 animate={{ x: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="block magnetic-hover py-2 text-white/70 hover:text-white transition-colors"
+                className="block py-2 text-white/70 hover:text-white transition-colors"
               >
                 {item.name}
               </motion.a>

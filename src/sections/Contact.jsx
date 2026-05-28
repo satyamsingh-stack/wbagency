@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from 'lucide-react'
-import { useState } from 'react'
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,29 +9,59 @@ export default function Contact() {
     email: '',
     message: '',
   })
+  const [isLoading, setIsLoading] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('BplNyD2b98NgGNDzl')
+  }, [])
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission
-    console.log(formData)
-    setFormData({ name: '', email: '', message: '' })
+    setIsLoading(true)
+    setSubmitStatus(null)
+
+    try {
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        'service_y37fk8p',
+        'template_yv53b7w',
+        {
+          to_email: 'Satyam0478@gmail.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        }
+      )
+
+      if (response.status === 200) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Message sent successfully! We\'ll get back to you soon.',
+        })
+        setFormData({ name: '', email: '', message: '' })
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error)
+      setSubmitStatus({
+        type: 'error',
+        message: 'Failed to send message. Please try again later.',
+      })
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'hello@webagency.com', href: 'mailto:hello@webagency.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, label: 'Location', value: 'San Francisco, CA', href: '#' },
-  ]
-
-  const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Mail, label: 'Email', value: '', href: 'mailto:' },
+    { icon: Phone, label: 'Phone', value: '', href: 'tel:' },
+    { icon: MapPin, label: 'Location', value: '', href: '#' },
   ]
 
   const containerVariants = {
@@ -58,7 +89,7 @@ export default function Contact() {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Have a project in mind? Let's talk about how we can help bring your vision to life.
+            Contact Thomas Hornung at Dreiland Digital Services
           </p>
         </motion.div>
 
@@ -96,27 +127,6 @@ export default function Contact() {
                 </motion.a>
               )
             })}
-
-            {/* Social Links */}
-            <motion.div className="pt-8 border-t border-white/10">
-              <p className="text-white/60 text-sm mb-6">Follow Us</p>
-              <div className="flex gap-4">
-                {socialLinks.map((social, idx) => {
-                  const Icon = social.icon
-                  return (
-                    <motion.a
-                key={idx}
-                href={social.href}
-                whileHover={{ y: -5, scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-12 h-12 rounded-lg glass magnetic-hover flex items-center justify-center hover:bg-cyan-500/20 transition-all group"
-              >
-                      <Icon size={20} className="text-white group-hover:text-cyan-400 transition-colors" />
-                    </motion.a>
-                  )
-                })}
-              </div>
-            </motion.div>
 
             {/* Quick Response */}
             <motion.div
@@ -197,14 +207,39 @@ export default function Contact() {
 
               {/* Submit Button */}
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: isLoading ? 1 : 1.05 }}
+                whileTap={{ scale: isLoading ? 1 : 0.95 }}
                 type="submit"
-                className="w-full btn-primary magnetic-hover flex items-center justify-center gap-2 group"
+                disabled={isLoading}
+                className="w-full btn-primary flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
-                <Send size={20} className="group-hover:translate-x-1 transition-transform" />
+                {isLoading ? 'Sending...' : 'Send Message'}
+                <Send size={20} className={isLoading ? '' : 'group-hover:translate-x-1 transition-transform'} />
               </motion.button>
+
+              {/* Success Message */}
+              {submitStatus?.type === 'success' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex items-center gap-3 p-4 rounded-lg bg-green-500/20 border border-green-500/50"
+                >
+                  <CheckCircle size={20} className="text-green-400 flex-shrink-0" />
+                  <p className="text-green-400 text-sm">{submitStatus.message}</p>
+                </motion.div>
+              )}
+
+              {/* Error Message */}
+              {submitStatus?.type === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex items-center gap-3 p-4 rounded-lg bg-red-500/20 border border-red-500/50"
+                >
+                  <AlertCircle size={20} className="text-red-400 flex-shrink-0" />
+                  <p className="text-red-400 text-sm">{submitStatus.message}</p>
+                </motion.div>
+              )}
 
               {/* Privacy Notice */}
               <p className="text-xs text-white/40 text-center">

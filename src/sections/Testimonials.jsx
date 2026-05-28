@@ -1,7 +1,10 @@
-import { motion } from 'framer-motion'
-import { Star } from 'lucide-react'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function Testimonials() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
   const testimonials = [
     {
       id: 1,
@@ -33,37 +36,15 @@ export default function Testimonials() {
       avatar: 'from-green-500 to-teal-500',
       project: 'Brand Redesign',
     },
-    {
-      id: 4,
-      name: 'David Kim',
-      role: 'CTO, CloudWorks',
-      company: 'CloudWorks',
-      rating: 5,
-      content: 'Outstanding development work. They built a robust platform that handles our scale flawlessly with 99.9% uptime.',
-      avatar: 'from-orange-500 to-red-500',
-      project: 'Cloud Platform',
-    },
-    {
-      id: 5,
-      name: 'Jessica Lee',
-      role: 'Product Manager, E-Shop Co',
-      company: 'E-Shop Co',
-      rating: 5,
-      content: 'Incredible speed and performance improvements. Our site loads 5x faster and customers love the seamless experience.',
-      avatar: 'from-indigo-500 to-blue-500',
-      project: 'Performance Optimization',
-    },
-    {
-      id: 6,
-      name: 'Robert Smith',
-      role: 'Director, API Solutions',
-      company: 'TechFlow',
-      rating: 5,
-      content: 'Professional, responsive, and technically brilliant. They integrated complex APIs with ease and precision.',
-      avatar: 'from-amber-500 to-yellow-500',
-      project: 'API Integration',
-    },
   ]
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
+  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -77,10 +58,15 @@ export default function Testimonials() {
   }
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { x: 100, opacity: 0 },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
+      transition: { duration: 0.6 },
+    },
+    exit: {
+      x: -100,
+      opacity: 0,
       transition: { duration: 0.6 },
     },
   }
@@ -108,52 +94,90 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-        >
-          {testimonials.map((testimonial) => (
-            <motion.div
-              key={testimonial.id}
-              variants={itemVariants}
-              whileHover={{ y: -12 }}
-              className="relative group cursor-pointer rounded-2xl overflow-hidden glass-dark border border-white/10 transition-all duration-300 hover:border-cyan-500/50 p-8"
+        {/* Carousel */}
+        <div className="relative max-w-2xl mx-auto mb-16">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="relative min-h-[380px] flex items-center"
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="absolute inset-0"
+              >
+                <div className="relative group cursor-pointer rounded-2xl overflow-hidden glass-dark border border-white/10 transition-all duration-300 hover:border-cyan-500/50 p-8 h-full flex flex-col justify-between">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center gap-1 mb-4">
+                      {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                        <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    
+                    <p className="text-white/90 mb-6 leading-relaxed text-lg">
+                      "{testimonials[currentIndex].content}"
+                    </p>
+                  </div>
+                  
+                  <div className="flex items-center gap-4 pt-6 border-t border-white/10">
+                    <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${testimonials[currentIndex].avatar} flex items-center justify-center text-white font-bold text-lg flex-shrink-0`}>
+                      {testimonials[currentIndex].name.charAt(0)}
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-white">{testimonials[currentIndex].name}</p>
+                      <p className="text-white/60 text-sm">{testimonials[currentIndex].role}</p>
+                      <span className="glass px-3 py-1 rounded-full text-xs text-cyan-400 inline-block mt-2">
+                        {testimonials[currentIndex].project}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </motion.div>
+
+          {/* Navigation Buttons */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={prevSlide}
+              className="p-3 rounded-full glass border border-white/20 hover:border-cyan-500/50 transition-all duration-300 text-white hover:text-cyan-400"
             >
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-<div className="relative z-10">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                
-                <p className="text-white/90 mb-6 leading-relaxed line-clamp-4">
-                  "{testimonial.content}"
-                </p>
-                
-                <div className="flex items-center gap-4 pt-4 border-t border-white/10">
-                  <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${testimonial.avatar} flex items-center justify-center text-white font-bold text-lg`}>
-                    {testimonial.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-white/60 text-sm">{testimonial.role}</p>
-                  </div>
-                </div>
-                
-                <div className="mt-4">
-                  <span className="glass px-3 py-1 rounded-full text-xs text-cyan-400">
-                    {testimonial.project}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+              <ChevronLeft size={24} />
+            </motion.button>
+
+            {/* Dots */}
+            <div className="flex gap-2">
+              {testimonials.map((_, index) => (
+                <motion.button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    index === currentIndex ? 'bg-cyan-500 w-8' : 'bg-white/30 w-2'
+                  }`}
+                  whileHover={{ scale: 1.2 }}
+                />
+              ))}
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={nextSlide}
+              className="p-3 rounded-full glass border border-white/20 hover:border-cyan-500/50 transition-all duration-300 text-white hover:text-cyan-400"
+            >
+              <ChevronRight size={24} />
+            </motion.button>
+          </div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -169,7 +193,7 @@ export default function Testimonials() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary magnetic-hover"
+              className="btn-primary"
             >
               Start Your Project
             </motion.button>

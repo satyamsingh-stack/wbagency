@@ -3,16 +3,15 @@ import { Globe, Code, Database, Zap, Shield, Cpu, Smartphone, Palette, TrendingU
 
 export default function Services() {
   const services = [
-    { title: 'Full Stack Website Development', icon: Globe, color: 'from-blue-500 to-cyan-500' },
-    { title: 'Frontend Development', icon: Code, color: 'from-purple-500 to-pink-500' },
-    { title: 'Backend Development', icon: Database, color: 'from-green-500 to-teal-500' },
-    { title: 'Custom Web Application Development', icon: Cpu, color: 'from-orange-500 to-red-500' },
-    { title: 'Monthly Website Maintenance', icon: Shield, color: 'from-indigo-500 to-blue-500' },
-    { title: 'API Development & Integration', icon: Zap, color: 'from-yellow-500 to-orange-500' },
-    { title: 'Website Redesign & Optimization', icon: Palette, color: 'from-pink-500 to-rose-500' },
-    { title: 'Performance & SEO Optimization', icon: TrendingUp, color: 'from-emerald-500 to-green-500' },
-    { title: 'Admin Dashboard Development', icon: Smartphone, color: 'from-cyan-500 to-blue-500' },
-    { title: 'E-Commerce Website Development', icon: ShoppingCart, color: 'from-amber-500 to-yellow-500' },
+    { title: 'Digital Business Services', icon: Globe, color: 'from-blue-500 to-cyan-500' },
+    { title: 'Modern Professional Websites', icon: Code, color: 'from-purple-500 to-pink-500' },
+    { title: 'Google Business & Local SEO', icon: Database, color: 'from-green-500 to-teal-500' },
+    { title: 'Digital Presence Optimization', icon: Cpu, color: 'from-orange-500 to-red-500' },
+    { title: 'Email & Online Setup', icon: Shield, color: 'from-indigo-500 to-blue-500' },
+    { title: 'Website Full Stack Development', icon: Code, color: 'from-cyan-500 to-blue-500' },
+    { title: 'Frontend Development', icon: Palette, color: 'from-pink-500 to-purple-500' },
+    { title: 'Backend Development', icon: Database, color: 'from-yellow-500 to-orange-500' },
+    { title: 'Custom Development', icon: Zap, color: 'from-emerald-500 to-teal-500' },
   ]
 
   const containerVariants = {
@@ -49,7 +48,7 @@ export default function Services() {
             Our <span className="gradient-text">Services</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Comprehensive web development solutions tailored to your unique business needs
+            Comprehensive web solutions tailored to your business needs
           </p>
         </motion.div>
 
@@ -59,7 +58,7 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((service, idx) => {
             const Icon = service.icon
@@ -71,7 +70,7 @@ export default function Services() {
                   y: -10,
                   boxShadow: '0 20px 40px rgba(59, 130, 246, 0.2)',
                 }}
-                className="group relative overflow-hidden rounded-2xl p-6 glass magnetic-hover cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl p-6 glass cursor-pointer"
               >
                 {/* Gradient Background */}
                 <div
@@ -121,9 +120,9 @@ export default function Services() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="btn-primary magnetic-hover"
+            className="btn-primary"
           >
-            Start Your Project
+            Get Started
           </motion.button>
         </motion.div>
       </div>

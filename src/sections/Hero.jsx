@@ -65,25 +65,13 @@ export default function Hero() {
         animate="visible"
         className="relative z-10 max-w-5xl mx-auto px-4 text-center"
       >
-        {/* Badge */}
-        <motion.div
-          variants={itemVariants}
-          className="inline-block mb-8"
-        >
-          <div className="glass px-6 py-2 rounded-full">
-            <span className="text-sm text-cyan-400 font-medium">
-              🚀 Award-Winning Web Development Agency
-            </span>
-          </div>
-        </motion.div>
-
         {/* Main Heading */}
         <motion.h1
           variants={itemVariants}
           className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
         >
-          Building Digital{' '}
-          <span className="gradient-text-alt">Futures</span>
+          Dreiland Digital{' '}
+          <span className="gradient-text-alt">Services</span>
         </motion.h1>
 
         {/* Subheading */}
@@ -91,7 +79,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-lg md:text-2xl text-white/70 mb-8 max-w-3xl mx-auto leading-relaxed"
         >
-          We create stunning, high-performance web experiences that drive growth and engagement. From concept to deployment, we're your partner in digital excellence.
+          Modern websites and digital solutions for local businesses. I help salons, beauty studios and local businesses strengthen their digital presence through modern websites and practical digital solutions.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -100,59 +88,21 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(59, 130, 246, 0.5)' }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-primary magnetic-hover group flex items-center gap-2"
+            whileHover={{ }}
+            whileTap={{ }}
+            className="btn-primary-no-hover group flex items-center gap-2"
           >
             Hire Me
-            <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+            <ArrowRight size={20} />
           </motion.button>
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-secondary magnetic-hover"
+            whileHover={{ }}
+            whileTap={{ }}
+            className="btn-secondary-no-hover"
           >
-            View Services
+            View Packages
           </motion.button>
         </motion.div>
-
-        {/* Trust Indicators */}
-        <motion.div
-          variants={itemVariants}
-          className="grid grid-cols-3 gap-8 max-w-2xl mx-auto"
-        >
-          {[
-            { number: '50+', label: 'Projects Delivered' },
-            { number: '40+', label: 'Happy Clients' },
-            { number: '5+', label: 'Years Experience' },
-          ].map((stat, idx) => (
-            <motion.div
-              key={idx}
-              whileHover={{ y: -5 }}
-              className="glass rounded-xl p-4"
-            >
-              <p className="text-2xl md:text-3xl font-bold gradient-text mb-2">
-                {stat.number}
-              </p>
-              <p className="text-sm text-white/60">{stat.label}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-cyan-500 rounded-full flex items-start justify-center p-2">
-          <motion.div
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-2 bg-cyan-500 rounded-full"
-          />
-        </div>
       </motion.div>
     </section>
   )

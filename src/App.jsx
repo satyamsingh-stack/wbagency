@@ -3,16 +3,16 @@ import Navigation from './components/Navigation'
 import Hero from './sections/Hero'
 import Services from './sections/Services'
 import WhyChooseMe from './sections/WhyChooseMe'
-import TechStack from './sections/TechStack'
 import Portfolio from './sections/Portfolio'
 import Testimonials from './sections/Testimonials'
 import Pricing from './sections/Pricing'
 import Contact from './sections/Contact'
+import Legal from './sections/Legal'
 import Footer from './components/Footer'
 import AnimatedBackground from './components/AnimatedBackground'
 import ScrollProgress from './components/ScrollProgress'
 import ParticleEffect from './components/ParticleEffect'
-import CursorFollower from './components/CursorFollower'
+import WhatsApp from './components/WhatsApp'
 
 export default function App() {
   return (
@@ -20,16 +20,16 @@ export default function App() {
       <AnimatedBackground />
       <ParticleEffect />
       <ScrollProgress />
-      <CursorFollower />
+      <WhatsApp />
       <Navigation />
       <Hero />
       <Services />
       <WhyChooseMe />
-      <TechStack />
       <Portfolio />
       <Testimonials />
       <Pricing />
       <Contact />
+      <Legal />
       <Footer />
     </div>
   )
