@@ -46,6 +46,11 @@ export default function Contact() {
           message: 'Message sent successfully! We\'ll get back to you soon.',
         })
         setFormData({ name: '', email: '', message: '' })
+        
+        // Auto-dismiss success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus(null)
+        }, 5000)
       }
     } catch (error) {
       console.error('EmailJS Error:', error)

@@ -190,13 +190,14 @@ export default function Testimonials() {
             <p className="text-white/70 mb-6 max-w-2xl">
               Let's discuss how we can transform your business with exceptional web development.
             </p>
-            <motion.button
+            <motion.a
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="btn-primary"
             >
               Start Your Project
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </div>

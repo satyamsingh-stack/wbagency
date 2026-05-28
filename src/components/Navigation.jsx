@@ -43,28 +43,29 @@ export default function Navigation() {
             <span className="font-bold text-xl hidden sm:block gradient-text">Dreiland Digital Services</span>
           </motion.div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item, index) => (
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center gap-8">
+              {navItems.map((item, index) => (
+                <motion.a
+                  key={index}
+                  href={item.href}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="text-white/70 hover:text-white transition-colors text-sm font-medium inline-block"
+                >
+                  {item.name}
+                </motion.a>
+              ))}
               <motion.a
-                key={index}
-                href={item.href}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="text-white/70 hover:text-white transition-colors text-sm font-medium inline-block"
+                href="#contact"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="btn-primary"
               >
-                {item.name}
+                Get Started
               </motion.a>
-            ))}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-primary"
-            >
-              Get Started
-            </motion.button>
-          </div>
+            </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
@@ -74,35 +75,36 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden pb-4 border-t border-white/10"
-          >
-            {navItems.map((item, index) => (
-              <motion.a
-                key={index}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                initial={{ x: -20 }}
-                animate={{ x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="block py-2 text-white/70 hover:text-white transition-colors"
-              >
-                {item.name}
-              </motion.a>
-            ))}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="btn-primary w-full mt-4"
-            >
-              Get Started
-            </motion.button>
-          </motion.div>
-        )}
+             {/* Mobile Menu */}
+             {isOpen && (
+               <motion.div
+                 initial={{ opacity: 0, height: 0 }}
+                 animate={{ opacity: 1, height: 'auto' }}
+                 exit={{ opacity: 0, height: 0 }}
+                 className="md:hidden pb-4 border-t border-white/10"
+               >
+                 {navItems.map((item, index) => (
+                   <motion.a
+                     key={index}
+                     href={item.href}
+                     onClick={() => setIsOpen(false)}
+                     initial={{ x: -20 }}
+                     animate={{ x: 0 }}
+                     transition={{ delay: index * 0.1 }}
+                     className="block py-2 text-white/70 hover:text-white transition-colors"
+                   >
+                     {item.name}
+                   </motion.a>
+                 ))}
+                 <motion.a
+                   href="#contact"
+                   whileHover={{ scale: 1.05 }}
+                   className="btn-primary w-full mt-4"
+                 >
+                   Get Started
+                 </motion.a>
+               </motion.div>
+             )}
       </div>
     </motion.nav>
   )
