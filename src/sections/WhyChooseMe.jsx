@@ -3,12 +3,12 @@ import { CheckCircle, Zap, Code, Shield, Cpu, Smartphone } from 'lucide-react'
 
 export default function WhyChooseMe() {
   const features = [
-    { icon: Zap, title: 'Fast Delivery', description: 'Quick turnaround without compromising quality' },
-    { icon: Code, title: 'Scalable Architecture', description: 'Built to grow with your business' },
-    { icon: CheckCircle, title: 'Clean & Maintainable Code', description: 'Industry best practices followed' },
-    { icon: Shield, title: 'SEO Friendly Development', description: 'Optimized for search engines' },
-    { icon: Smartphone, title: 'Responsive Design', description: 'Perfect on all devices' },
-    { icon: Cpu, title: 'Modern Tech Stack', description: 'Latest technologies & frameworks' },
+    { icon: Zap, title: 'Schnelle Lieferung', description: 'Schnelle Abwicklung ohne Qualitätseinbußen' },
+    { icon: Code, title: 'Skalierbare Architektur', description: 'Gebaut für das Wachstum Ihres Unternehmens' },
+    { icon: CheckCircle, title: 'Sauberer und wartbarer Code', description: 'Best Practices der Branche werden befolgt' },
+    { icon: Shield, title: 'SEO-freundliche Entwicklung', description: 'Optimiert für Suchmaschinen' },
+    { icon: Smartphone, title: 'Responsives Design', description: 'Perfekt auf allen Geräten' },
+    { icon: Cpu, title: 'Moderner Tech-Stack', description: 'Neueste Technologien & Frameworks' },
   ]
 
   const containerVariants = {
@@ -41,10 +41,10 @@ export default function WhyChooseMe() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why <span className="gradient-text">Choose Me</span>
+            Warum <span className="gradient-text">mich wählen</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Discover what sets us apart in the web development industry
+            Erfahren Sie, was uns in der Webentwicklungsbranche besonders macht
           </p>
         </motion.div>
 
@@ -113,7 +113,7 @@ export default function WhyChooseMe() {
                   className="text-center"
                 >
                   <div className="text-6xl font-bold gradient-text mb-4">100%</div>
-                  <p className="text-white/60">Dedicated to Excellence</p>
+                  <p className="text-white/60">Engagement für Exzellenz</p>
                 </motion.div>
               </motion.div>
             </div>
@@ -129,9 +129,9 @@ export default function WhyChooseMe() {
         >
           {[
             { value: '99.9%', label: 'Uptime' },
-            { value: '24hrs', label: 'Response Time' },
+            { value: '24h', label: 'Antwortzeit' },
             { value: '24/7', label: 'Support' },
-            { value: '100%', label: 'Satisfaction' },
+            { value: '100%', label: 'Zufriedenheit' },
           ].map((stat, idx) => (
             <motion.div
               key={idx}

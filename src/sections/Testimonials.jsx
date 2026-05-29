@@ -85,13 +85,13 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <div className="glass px-4 py-2 rounded-full inline-block mb-4">
-            <span className="text-cyan-400 text-sm font-semibold">⭐ CLIENT TESTIMONIALS</span>
+            <span className="text-cyan-400 text-sm font-semibold">⭐ KUNDENBEWERTUNGEN</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            What Our <span className="gradient-text">Clients Say</span>
+            Was unsere <span className="gradient-text">Kunden sagen</span>
           </h2>
           <p className="text-white/60 text-lg max-w-3xl mx-auto">
-            Real stories from businesses we've helped transform. Their success is our greatest achievement.
+            Echte Geschichten von Unternehmen, die wir transformiert haben. Ihr Erfolg ist unser größtes Erfolgsgeheimnis.
           </p>
         </motion.div>
 
