@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const footerLinks = [
-    { title: 'Quick Links', links: ['Services', 'Packages', 'Portfolio', 'Contact'] },
+    { title: 'Schnelllinks', links: ['Leistungen', 'Pakete', 'Portfolio', 'Kontakt'] },
   ]
 
   return (
@@ -28,7 +28,7 @@ export default function Footer() {
               <span className="font-bold text-lg gradient-text">Dreiland Digital Services</span>
             </motion.div>
             <p className="text-white/60 text-sm">
-              Building exceptional digital experiences with modern web technologies.
+              Aufbau außerordentlicher digitaler Erlebnisse mit modernen Web-Technologien.
             </p>
           </motion.div>
 
@@ -38,10 +38,10 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <h4 className="font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="font-semibold text-white mb-4">Schnelllinks</h4>
             <ul className="space-y-2">
               {footerLinks[0].links.map((link, i) => {
-                const linkId = link === 'Packages' ? 'pricing' : link.toLowerCase()
+                const linkId = link === 'Pakete' ? 'pricing' : link.toLowerCase()
                 return (
                   <li key={i}>
                     <motion.a
@@ -69,7 +69,7 @@ export default function Footer() {
         >
           {/* Copyright */}
           <p className="text-white/60 text-sm">
-            © {currentYear} Dreiland Digital Services. All rights reserved.
+            © {currentYear} Dreiland Digital Services. Alle Rechte vorbehalten.
           </p>
         </motion.div>
       </div>

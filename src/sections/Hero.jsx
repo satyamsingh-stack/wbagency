@@ -80,7 +80,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-lg md:text-2xl text-white/70 mb-8 max-w-3xl mx-auto leading-relaxed"
         >
-          Modern websites and digital solutions for local businesses. I help salons, beauty studios and local businesses strengthen their digital presence through modern websites and practical digital solutions.
+          Moderne Websites und digitale Lösungen für lokale Unternehmen. Ich unterstütze lokale kleine und mittlere Unternehmen dabei, ihre digitale Präsenz durch moderne Websites und effektive digitale Lösungen professionell aufzubauen.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -94,7 +94,7 @@ export default function Hero() {
              whileTap={{ }}
              className="btn-primary-no-hover group flex items-center gap-2"
            >
-             Hire Me
+             Anfrage stellen
              <ArrowRight size={20} />
            </motion.a>
            <Link
@@ -103,7 +103,7 @@ export default function Hero() {
              duration={500}
              className="btn-secondary-no-hover inline-flex items-center justify-center cursor-pointer"
            >
-             View Packages
+             Pakete anschauen
            </Link>
          </motion.div>
       </motion.div>

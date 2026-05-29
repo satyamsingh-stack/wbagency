@@ -33,7 +33,7 @@ export default function Contact() {
         'service_y37fk8p',
         'template_yv53b7w',
         {
-          to_email: 'Satyam0478@gmail.com',
+          to_email: 'support@hornungdigital.ch',
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
@@ -43,7 +43,7 @@ export default function Contact() {
       if (response.status === 200) {
         setSubmitStatus({
           type: 'success',
-          message: 'Message sent successfully! We\'ll get back to you soon.',
+          message: 'Nachricht erfolgreich versendet! Wir melden uns bald bei Ihnen.',
         })
         setFormData({ name: '', email: '', message: '' })
         
@@ -56,7 +56,7 @@ export default function Contact() {
       console.error('EmailJS Error:', error)
       setSubmitStatus({
         type: 'error',
-        message: 'Failed to send message. Please try again later.',
+        message: 'Nachricht konnte nicht versendet werden. Bitte versuchen Sie es später erneut.',
       })
     } finally {
       setIsLoading(false)
@@ -64,9 +64,9 @@ export default function Contact() {
   }
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'support@hornungdigital.ch', href: 'support@hornungdigital.ch' },
-    { icon: Phone, label: 'Phone', value: '+49 1575 8848625', href: 'tel:+49 1575 8848625' },
-    { icon: MapPin, label: 'Address', value: 'Missionsstraße 24, 4055 Basel, Schweiz', href: '#' },
+    { icon: Mail, label: 'E-Mail', value: 'support@hornungdigital.ch', href: 'support@hornungdigital.ch' },
+    { icon: Phone, label: 'Telefon', value: '+49 1575 8848625', href: 'tel:+49 1575 8848625' },
+    { icon: MapPin, label: 'Adresse', value: 'Missionsstraße 24, 4055 Basel, Schweiz', href: '#' },
   ]
 
   const containerVariants = {
@@ -91,10 +91,10 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="gradient-text">Touch</span>
+            Nehmen Sie <span className="gradient-text">Kontakt auf</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Contact Thomas Hornung at Dreiland Digital Services
+            Kontaktieren Sie Thomas Hornung von Dreiland Digital Services
           </p>
         </motion.div>
 
@@ -139,9 +139,9 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               className="glass rounded-xl p-6 bg-gradient-to-br from-cyan-500/10 to-blue-500/10"
             >
-              <p className="text-sm text-cyan-400 font-semibold mb-2">⚡ Quick Response</p>
+              <p className="text-sm text-cyan-400 font-semibold mb-2">⚡ Schnelle Antwort</p>
               <p className="text-white/60 text-sm">
-                We typically respond to inquiries within 24 hours during business days.
+                Wir antworten auf Anfragen normalerweise innerhalb von 24 Stunden an Arbeitstagen.
               </p>
             </motion.div>
           </motion.div>
@@ -167,7 +167,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/40 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all"
-                  placeholder="Your Name"
+                  placeholder="Ihr Name"
                   required
                 />
               </motion.div>
@@ -178,7 +178,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <label className="block text-sm font-medium text-white mb-2">Email</label>
+                <label className="block text-sm font-medium text-white mb-2">E-Mail</label>
                 <motion.input
                   whileFocus={{ boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)' }}
                   type="email"
@@ -186,7 +186,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/40 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all"
-                  placeholder="your@email.com"
+                  placeholder="ihre@email.com"
                   required
                 />
               </motion.div>
@@ -197,7 +197,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <label className="block text-sm font-medium text-white mb-2">Message</label>
+                <label className="block text-sm font-medium text-white mb-2">Nachricht</label>
                 <motion.textarea
                   whileFocus={{ boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)' }}
                   name="message"
@@ -205,7 +205,7 @@ export default function Contact() {
                   onChange={handleChange}
                   rows={5}
                   className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/40 focus:border-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 transition-all resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="Erzählen Sie uns von Ihrem Projekt..."
                   required
                 />
               </motion.div>
@@ -218,7 +218,7 @@ export default function Contact() {
                 disabled={isLoading}
                 className="w-full btn-primary flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isLoading ? 'Sending...' : 'Send Message'}
+                {isLoading ? 'Wird gesendet...' : 'Nachricht senden'}
                 <Send size={20} className={isLoading ? '' : 'group-hover:translate-x-1 transition-transform'} />
               </motion.button>
 
@@ -248,7 +248,7 @@ export default function Contact() {
 
               {/* Privacy Notice */}
               <p className="text-xs text-white/40 text-center">
-                We respect your privacy. Your information is safe with us.
+                Wir respektieren Ihre Privatsphäre. Ihre Informationen sind bei uns sicher.
               </p>
             </form>
           </motion.div>

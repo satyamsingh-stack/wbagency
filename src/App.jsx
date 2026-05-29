@@ -12,6 +12,7 @@ import AnimatedBackground from './components/AnimatedBackground'
 import ScrollProgress from './components/ScrollProgress'
 import ParticleEffect from './components/ParticleEffect'
 import WhatsApp from './components/WhatsApp'
+import CursorFollower from './components/CursorFollower'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <AnimatedBackground />
       <ParticleEffect />
       <ScrollProgress />
+      <CursorFollower />
       <WhatsApp />
       <Navigation />
       <Hero />

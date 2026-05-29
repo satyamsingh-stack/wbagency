@@ -4,15 +4,15 @@ import { Link } from 'react-scroll'
 
 export default function Services() {
   const services = [
-    { title: 'Digital Business Services', icon: Globe, color: 'from-blue-500 to-cyan-500' },
-    { title: 'Modern Professional Websites', icon: Code, color: 'from-purple-500 to-pink-500' },
-    { title: 'Google Business & Local SEO', icon: Database, color: 'from-green-500 to-teal-500' },
-    { title: 'Digital Presence Optimization', icon: Cpu, color: 'from-orange-500 to-red-500' },
-    { title: 'Email & Online Setup', icon: Shield, color: 'from-indigo-500 to-blue-500' },
+    { title: 'Digitale Dienstleistungen für Unternehmen', icon: Globe, color: 'from-blue-500 to-cyan-500' },
+    { title: 'Moderne professionelle Websites', icon: Code, color: 'from-purple-500 to-pink-500' },
+    { title: 'Google-Unternehmensprofil & Local SEO', icon: Database, color: 'from-green-500 to-teal-500' },
+    { title: 'Optimierung der digitalen Präsenz', icon: Cpu, color: 'from-orange-500 to-red-500' },
+    { title: 'E-Mail- und Online-Einrichtung', icon: Shield, color: 'from-indigo-500 to-blue-500' },
     { title: 'Website Full Stack Development', icon: Code, color: 'from-cyan-500 to-blue-500' },
-    { title: 'Frontend Development', icon: Palette, color: 'from-pink-500 to-purple-500' },
-    { title: 'Backend Development', icon: Database, color: 'from-yellow-500 to-orange-500' },
-    { title: 'Custom Development', icon: Zap, color: 'from-emerald-500 to-teal-500' },
+    { title: 'Frontend Entwicklung', icon: Palette, color: 'from-pink-500 to-purple-500' },
+    { title: 'Backend Entwicklung', icon: Database, color: 'from-yellow-500 to-orange-500' },
+    { title: 'Benutzerdefinierte Entwicklung', icon: Zap, color: 'from-emerald-500 to-teal-500' },
   ]
 
   const containerVariants = {
@@ -46,10 +46,10 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Our <span className="gradient-text">Services</span>
+            Unsere <span className="gradient-text">Leistungen</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Comprehensive web solutions tailored to your business needs
+            Umfassende Web-Lösungen, die auf Ihre Anforderungen zugeschnitten sind
           </p>
         </motion.div>
 

@@ -45,10 +45,10 @@ export default function TechStack() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Our <span className="gradient-text">Tech Stack</span>
+            Unser <span className="gradient-text">Tech-Stack</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Cutting-edge technologies for powerful web solutions
+            Hochmoderne Technologien für leistungsstarke Web-Lösungen
           </p>
         </motion.div>
 

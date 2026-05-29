@@ -13,9 +13,9 @@ export default function Testimonials() {
       // role: 'CEO, TechVenture',
       // company: 'TechVenture',
       rating: 5,
-      content: 'WebAgency transformed our outdated website into a modern masterpiece. The attention to detail and technical expertise exceeded our expectations.',
+      content: 'Dreiland Digital hat unsere veraltete Website in ein modernes Meisterwerk verwandelt. Die Liebe zum Detail und die technische Kompetenz übertrafen unsere Erwartungen.',
       avatar: 'from-blue-500 to-cyan-500',
-      project: 'SaaS Platform',
+      project: 'SaaS-Plattform',
     },
     {
       id: 2,
@@ -23,9 +23,9 @@ export default function Testimonials() {
       // role: 'Founder, DataSync',
       // company: 'DataSync',
       rating: 5,
-      content: 'From concept to launch, they delivered exceptional quality. Our conversion rates increased by 150% after the redesign.',
+      content: 'Von Konzept bis Start lieferten sie außergewöhnliche Qualität. Unsere Umwandlungsraten stiegen nach der Neugestaltung um 150%.',
       avatar: 'from-purple-500 to-pink-500',
-      project: 'E-commerce Platform',
+      project: 'E-Commerce-Plattform',
     },
     {
       id: 3,
@@ -33,9 +33,9 @@ export default function Testimonials() {
       // role: 'Marketing Director, BrandFlow',
       // company: 'BrandFlow',
       rating: 5,
-      content: 'The team understood our vision perfectly. The new website elevated our brand presence and user engagement dramatically.',
+      content: 'Das Team verstand unsere Vision perfekt. Die neue Website hob unsere Markenpräsenz und Benutzerinteraktion dramatisch.',
       avatar: 'from-green-500 to-teal-500',
-      project: 'Brand Redesign',
+      project: 'Markenumgestaltung',
     },
   ]
 
@@ -85,13 +85,13 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <div className="glass px-4 py-2 rounded-full inline-block mb-4">
-            <span className="text-cyan-400 text-sm font-semibold">⭐ CLIENT TESTIMONIALS</span>
+            <span className="text-cyan-400 text-sm font-semibold">⭐ KUNDENBEWERTUNGEN</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            What Our <span className="gradient-text">Clients Say</span>
+            Was unsere <span className="gradient-text">Kunden sagen</span>
           </h2>
           <p className="text-white/60 text-lg max-w-3xl mx-auto">
-            Real stories from businesses we've helped transform. Their success is our greatest achievement.
+            Echte Geschichten von Unternehmen, die wir transformiert haben. Ihr Erfolg ist unser größtes Erfolgsgeheimnis.
           </p>
         </motion.div>
 
@@ -187,17 +187,17 @@ export default function Testimonials() {
           className="text-center"
         >
           <div className="glass rounded-2xl p-8 inline-block">
-            <h3 className="text-2xl font-bold mb-4 gradient-text">Ready to Join Our Success Stories?</h3>
+            <h3 className="text-2xl font-bold mb-4 gradient-text">Bereit, Teil unserer Erfolgsgeschichten zu werden?</h3>
             <p className="text-white/70 mb-6 max-w-2xl">
-              Let's discuss how we can transform your business with exceptional web development.
+              Lassen Sie uns besprechen, wie wir Ihr Geschäft mit außergewöhnlicher Webentwicklung transformieren können.
             </p>
-<Link
+            <Link
                to="contact"
                smooth={true}
                duration={500}
                className="btn-primary inline-block cursor-pointer"
              >
-               Start Your Project
+               Starten Sie Ihr Projekt
              </Link>
           </div>
         </motion.div>

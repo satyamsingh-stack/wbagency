@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react'
 
 export default function WhatsApp() {
   const phoneNumber = '+4915758848625'
-  const message = 'Hello! I would like to know more about your services.'
+  const message = 'Hallo! Ich möchte gerne mehr über Ihre Dienstleistungen erfahren.'
 
   const handleWhatsAppClick = () => {
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
@@ -43,7 +43,7 @@ export default function WhatsApp() {
           whileHover={{ opacity: 1, x: 0 }}
           className="absolute bottom-16 right-0 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm whitespace-nowrap pointer-events-none border border-white/10"
         >
-          Chat with us!
+          Schreiben Sie uns!
         </motion.div>
 
         {/* Glow Effect */}

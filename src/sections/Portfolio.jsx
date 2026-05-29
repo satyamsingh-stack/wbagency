@@ -55,10 +55,10 @@ export default function Portfolio() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Recent <span className="gradient-text">Projects</span>
+            Letzte <span className="gradient-text">Projekte</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Showcase of our recent work across different industries and technologies
+            Showcase unserer kürzlichen Arbeiten in verschiedenen Industrien und Technologien
           </p>
         </motion.div>
 

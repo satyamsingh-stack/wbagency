@@ -5,45 +5,45 @@ import { Link } from 'react-scroll'
 export default function Pricing() {
     const plans = [
     {
-      name: 'Starter Website',
+      name: 'Starter-Website',
       price: '€500 – €800',
-      description: 'Perfect for small businesses getting started online',
+      description: 'Perfekt für kleine Unternehmen, um online zu starten',
       features: [
-        'Up to 5 pages',
-        'Mobile responsive design',
-        'WhatsApp integration',
-        'Contact form',
-        'Basic SEO setup',
+        'Bis zu 5 Seiten',
+        'Mobiloptimiertes Design',
+        'WhatsApp-Integration',
+        'Kontaktformular',
+        'Grundlegende SEO-Einrichtung',
       ],
       highlighted: false,
-      period: 'one-time', // One-time payment
+      period: 'one-time',
     },
     {
-      name: 'Business Website',
+      name: 'Business-Website',
       price: '€800 – €1200',
-      description: 'Complete solution for growing businesses',
+      description: 'Vollständige Lösung für wachsende Unternehmen',
       features: [
-        'Booking system integration',
-        'SEO optimization',
-        'Google Business setup',
-        'Gallery / portfolio section',
-        'Mobile responsive design',
+        'Integration eines Buchungssystems',
+        'SEO-Optimierung',
+        'Einrichtung des Google-Unternehmensprofils',
+        'Galerie- / Portfolio-Bereich',
+        'Mobiloptimiertes Design',
       ],
       highlighted: true,
-      period: 'one-time', // One-time payment
+      period: 'one-time',
     },
     {
-      name: 'Monthly Maintenance',
-      price: 'From €49',
-      description: 'Ongoing support and updates',
+      name: 'Monatliche Wartungspakete',
+      price: 'Ab €49',
+      description: 'Kontinuierliche Unterstützung und Updates',
       features: [
-        'Website updates',
-        'Technical maintenance',
-        'Small content changes',
-        'Security & support',
+        'Website-Aktualisierungen',
+        'Technische Wartung',
+        'Kleine Inhaltsänderungen',
+        'Sicherheit & Support',
       ],
       highlighted: false,
-      period: 'monthly', // Monthly payment
+      period: 'monthly',
     },
   ]
 
@@ -78,10 +78,10 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Transparent <span className="gradient-text">Pricing</span>
+            Transparente <span className="gradient-text">Preise</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Choose the perfect package for your business needs
+            Wählen Sie das perfekte Paket für Ihre Anforderungen
           </p>
         </motion.div>
 
@@ -112,7 +112,7 @@ export default function Pricing() {
                   className="absolute -top-4 left-1/2 transform -translate-x-1/2"
                 >
                   <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular ⭐
+                    Beliebteste Lösung ⚠️
                   </div>
                 </motion.div>
               )}
@@ -141,13 +141,13 @@ export default function Pricing() {
                       : 'btn-secondary'
                   }`}
                 >
-                  Get Started
+                  Jetzt starten
                 </Link>
 
                 {/* Features */}
                 <div className="space-y-4">
                   <p className="text-white/60 text-sm font-semibold uppercase tracking-wide">
-                    What's included:
+                    Inklusive:
                   </p>
                   {plan.features.map((feature, i) => (
                     <motion.div
@@ -174,9 +174,9 @@ export default function Pricing() {
           transition={{ delay: 0.5 }}
           className="glass rounded-2xl p-8 text-center"
         >
-          <h3 className="text-xl font-bold text-white mb-4">Custom Requirements?</h3>
+          <h3 className="text-xl font-bold text-white mb-4">Benutzerdefinierte Anforderungen?</h3>
 <p className="text-white/60 mb-6 max-w-2xl mx-auto">
-             We can tailor any package to meet your specific needs. Let's discuss your project requirements and create a custom solution.
+             Wir können jedes Paket anpassen, um Ihre spezifischen Anforderungen zu erfüllen. Lassen Sie uns Ihre Projektanforderungen besprechen und eine maßgeschneiderte Lösung entwickeln.
            </p>
            <Link
              to="contact"
@@ -184,7 +184,7 @@ export default function Pricing() {
              duration={500}
              className="btn-secondary inline-block cursor-pointer"
            >
-             Contact Us for Custom Quote
+             Kontaktieren Sie uns für ein individuelles Angebot
            </Link>
          </motion.div>
       </div>

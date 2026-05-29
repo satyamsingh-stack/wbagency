@@ -15,10 +15,10 @@ export default function Navigation() {
   }, [])
 
   const navItems = [
-    { name: 'Home', href: '#' },
-    { name: 'Services', href: '#services' },
-    { name: 'Packages', href: '#pricing' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Startseite', href: '#' },
+    { name: 'Leistungen', href: '#services' },
+    { name: 'Pakete', href: '#pricing' },
+    { name: 'Kontakt', href: '#contact' },
   ]
 
   return (
@@ -62,7 +62,7 @@ export default function Navigation() {
                 whileTap={{ scale: 0.95 }}
                 className="btn-primary"
               >
-                Get Started
+                Jetzt starten
               </motion.a>
             </div>
 
@@ -100,7 +100,7 @@ export default function Navigation() {
                    whileHover={{ scale: 1.05 }}
                    className="btn-primary w-full mt-4"
                  >
-                   Get Started
+                   Jetzt starten
                  </motion.a>
                </motion.div>
              )}
