@@ -33,7 +33,7 @@ export default function Contact() {
         'service_y37fk8p',
         'template_yv53b7w',
         {
-          to_email: 'Satyam0478@gmail.com',
+          to_email: 'support@hornungdigital.ch',
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
