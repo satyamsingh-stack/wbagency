@@ -4,14 +4,14 @@ import { ExternalLink } from 'lucide-react'
 export default function Portfolio() {
   const projects = [
     {
-      title: 'Trendzo Media',
-      category: 'Business',
+      title: 'Hornung Consulting',
+      category: 'Consulting',
       categoryColor: 'cyan',
-      description: 'Modern digital agency website with animated elements',
+      description: 'Wir bieten Ihnen professionelle Unterstützung in allen steuerlichen, rechtlichen und betriebswirtschaftlichen Angelegenheiten.',
       tech: ['React', 'GSAP', 'TailwindCSS', 'Framer Motion'],
       gradient: 'from-cyan-500 to-blue-600',
-      image: '/images/trend-zomedia.png',
-      link: 'https://trendzomedia.com/',
+      image: '/images/Logo%20in%20maroon.jpg.jpeg',
+      link: 'https://hornungconsulting.ch/',
     },
     {
       title: 'Idea Institute',

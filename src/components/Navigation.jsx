@@ -50,7 +50,7 @@ export default function Navigation() {
               DD
             </div>
             <span className="font-bold text-base sm:text-xl hidden sm:block gradient-text">
-              Dreiland Digital Services
+              Dreiländer Digital Services
             </span>
           </motion.a>
 
