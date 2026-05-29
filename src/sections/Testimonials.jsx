@@ -13,7 +13,7 @@ export default function Testimonials() {
       // role: 'CEO, TechVenture',
       // company: 'TechVenture',
       rating: 5,
-      content: 'Dreiland Digital hat unsere veraltete Website in ein modernes Meisterwerk verwandelt. Die Liebe zum Detail und die technische Kompetenz übertrafen unsere Erwartungen.',
+      content: 'Dreiländer Digital hat unsere veraltete Website in ein modernes Meisterwerk verwandelt. Die Liebe zum Detail und die technische Kompetenz übertrafen unsere Erwartungen.',
       avatar: 'from-blue-500 to-cyan-500',
       project: 'SaaS-Plattform',
     },

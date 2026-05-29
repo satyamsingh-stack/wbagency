@@ -25,7 +25,7 @@ export default function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center font-bold text-white">
                 DD
               </div>
-              <span className="font-bold text-lg gradient-text">Dreiland Digital Services</span>
+              <span className="font-bold text-lg gradient-text">Dreiländer Digital Services</span>
             </motion.div>
             <p className="text-white/60 text-sm">
               Aufbau außerordentlicher digitaler Erlebnisse mit modernen Web-Technologien.
@@ -69,7 +69,7 @@ export default function Footer() {
         >
           {/* Copyright */}
           <p className="text-white/60 text-sm">
-            © {currentYear} Dreiland Digital Services. Alle Rechte vorbehalten.
+            © {currentYear} Dreiländer Digital Services. Alle Rechte vorbehalten.
           </p>
         </motion.div>
       </div>

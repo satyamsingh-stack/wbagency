@@ -71,7 +71,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
         >
-          Dreiland Digital{' '}
+          Dreiländer Digital{' '}
           <span className="gradient-text-alt">Services</span>
         </motion.h1>
 

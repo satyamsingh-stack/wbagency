@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Globe, Code, Database, Zap, Shield, Cpu, Smartphone, Palette, TrendingUp, ShoppingCart } from 'lucide-react'
+import { Globe, Code, Database, Shield, Cpu } from 'lucide-react'
 import { Link } from 'react-scroll'
 
 export default function Services() {
@@ -9,11 +9,7 @@ export default function Services() {
     { title: 'Google-Unternehmensprofil & Local SEO', icon: Database, color: 'from-green-500 to-teal-500' },
     { title: 'Optimierung der digitalen Präsenz', icon: Cpu, color: 'from-orange-500 to-red-500' },
     { title: 'E-Mail- und Online-Einrichtung', icon: Shield, color: 'from-indigo-500 to-blue-500' },
-    { title: 'Website Full Stack Development', icon: Code, color: 'from-cyan-500 to-blue-500' },
-    { title: 'Frontend Entwicklung', icon: Palette, color: 'from-pink-500 to-purple-500' },
-    { title: 'Backend Entwicklung', icon: Database, color: 'from-yellow-500 to-orange-500' },
-    { title: 'Benutzerdefinierte Entwicklung', icon: Zap, color: 'from-emerald-500 to-teal-500' },
-  ]
+    ]
 
   const containerVariants = {
     hidden: { opacity: 0 },

@@ -94,7 +94,7 @@ export default function Contact() {
             Nehmen Sie <span className="gradient-text">Kontakt auf</span>
           </h2>
           <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Kontaktieren Sie Thomas Hornung von Dreiland Digital Services
+            Kontaktieren Sie Thomas Hornung von Dreiländer Digital Services
           </p>
         </motion.div>
 
