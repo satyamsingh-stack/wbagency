@@ -112,8 +112,8 @@ export default function WhyChooseMe() {
                   transition={{ duration: 3, repeat: Infinity }}
                   className="text-center"
                 >
-                  <div className="text-6xl font-bold gradient-text mb-4">100%</div>
-                  <p className="text-white/60">Engagement für Exzellenz</p>
+                  <div className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-2 sm:mb-4">100%</div>
+                  <p className="text-sm sm:text-base text-white/60">Engagement für Exzellenz</p>
                 </motion.div>
               </motion.div>
             </div>
