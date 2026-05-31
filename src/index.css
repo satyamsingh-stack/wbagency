@@ -19,6 +19,17 @@ body {
   overflow-x: hidden;
 }
 
+body.menu-open {
+  overflow: hidden;
+  touch-action: none;
+  position: fixed;
+  width: 100%;
+}
+
+html.menu-open {
+  overflow: hidden;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
