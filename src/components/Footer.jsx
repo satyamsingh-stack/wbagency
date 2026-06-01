@@ -65,8 +65,27 @@ export default function Footer() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="flex justify-center items-center"
+          className="flex flex-col items-center gap-6"
         >
+          {/* Legal Links */}
+          <div className="flex gap-6 justify-center flex-wrap">
+            <motion.a
+              href="#datenschutz"
+              whileHover={{ color: '#06b6d4' }}
+              className="text-white/60 hover:text-cyan-400 transition-colors text-sm cursor-pointer"
+            >
+              Datenschutzerklärung
+            </motion.a>
+            <span className="text-white/30">•</span>
+            <motion.a
+              href="#impressum"
+              whileHover={{ color: '#06b6d4' }}
+              className="text-white/60 hover:text-cyan-400 transition-colors text-sm cursor-pointer"
+            >
+              Impressum
+            </motion.a>
+          </div>
+
           {/* Copyright */}
           <p className="text-white/60 text-sm">
             © {currentYear} Dreiländer Digital Services. Alle Rechte vorbehalten.
